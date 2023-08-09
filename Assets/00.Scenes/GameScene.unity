@@ -236,7 +236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 307.735, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 615.47, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16554387
@@ -3303,6 +3303,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePopupUI: {fileID: 1004664975}
+  groundRankText: {fileID: 1400921163}
+  groundPriceText: {fileID: 134806108}
+  buildingNameText: {fileID: 32719560}
+  buildingTypeText: {fileID: 211890012}
+  groundEnforceText: {fileID: 916648744}
 --- !u!1 &1400921161
 GameObject:
   m_ObjectHideFlags: 0
@@ -4102,7 +4107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1766187675
 RectTransform:
   m_ObjectHideFlags: 0
