@@ -17,8 +17,10 @@ public class ClickManager : MonoBehaviour
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             RaycastHit2D hit = Physics2D.Raycast(pos,Vector2.zero,0f);
-                GameObject name_obj = hit.transform.gameObject;
-                print(name_obj.name);
+            if(hit.collider != null){
+                GameObject click_Obj = hit.transform.gameObject;
+                print(click_Obj.GetComponent<Tile>().GetLevel());
+            }                
         }   
     }
 }

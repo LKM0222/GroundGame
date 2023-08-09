@@ -24,6 +24,8 @@ public class TilemapSpawner : MonoBehaviour
             this.transform.position = new Vector3(tmpX,tmpY,this.transform.position.z);
             dx = tmpX;
             for(int j = 0;j<theGM.tileSize;j++){
+                tile.GetComponent<Tile>().SetLeve(randomNum());
+                tile.GetComponent<Tile>().SetSprite(theGM.tileLevelSprite[tile.GetComponent<Tile>().GetLevel() - 1]);
                 Instantiate(tile, this.transform.position, Quaternion.identity);
                 dx += tile.GetComponent<BoxCollider2D>().size.x;
                 print(dx);
@@ -32,5 +34,9 @@ public class TilemapSpawner : MonoBehaviour
             tmpY -= tile.GetComponent<BoxCollider2D>().size.y;
         }
         
+    }
+
+    int randomNum(){
+        return Random.Range(1,6);
     }
 }
