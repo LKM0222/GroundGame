@@ -99,6 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 3
+  price: 0
+  rank: 0
+  groundName: 
+  enforce: 0
+  buildingName: 
+  buildingType: 
+  buildingLevel: 
 --- !u!61 &-3939031506839906987
 BoxCollider2D:
   m_ObjectHideFlags: 0
