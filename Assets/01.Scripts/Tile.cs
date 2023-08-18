@@ -5,8 +5,8 @@ using UnityEngine;
 public class Tile : MonoBehaviour
 {
     int x,y;
-    [SerializeField] int level;
-    [SerializeField] int price;
+    [SerializeField] int level; //처음 시작할 때 땅의 레벨 변동 x
+    [SerializeField] long price;
     [SerializeField] int rank;
     [SerializeField] string groundName;
     [SerializeField] int enforce;
@@ -20,7 +20,13 @@ public class Tile : MonoBehaviour
     {
         theGM = FindObjectOfType<GameManager>();
     }
-    Tile(int _x, int _y, int _level, int _price){
+
+    private void Update()
+    {
+        SetGroundRank();
+    }
+
+    public Tile(int _x, int _y, int _level, int _price){
         x = _x;
         y = _y;
         level = _level;
@@ -28,7 +34,7 @@ public class Tile : MonoBehaviour
     }
 
     //setter
-    public void SetLeve(int _level){
+    public void SetLevel(int _level){
         level = _level;
     }
     public void SetSprite(Sprite _sprite){
@@ -60,25 +66,64 @@ public class Tile : MonoBehaviour
     public int GetLevel(){
         return level;
     }
-    public int GetPrice(int _price){
+    public long GetPrice(){
         return price;
     }
-    public int GetRank(int _rank){
+    public int GetRank(){
         return rank;
     }
-    public string GetGroundName(string _name){
+    public string GetGroundName(){
         return groundName;
     }
-    public int GetEnforce(int _enforce){
+    public int GetEnforce(){
         return enforce;
     }
-    public string GetBuildingName(string _BName){
+    public string GetBuildingName(){
         return buildingName;
     }
-    public string GetBuildingType(string _BType){
+    public string GetBuildingType(){
         return buildingType;
     }
-    public string GetBuildingLevel(string _BLevel){
+    public string GetBuildingLevel(){
         return buildingLevel;
+    }
+
+    //etc
+    public void SetGroundLevelToName(){
+        switch(level){
+            case 1:
+                groundName = "척박한 땅";
+                break;
+            case 2:
+                groundName = "그저 그런 땅";
+                break;
+            case 3:
+                groundName = "좋은 땅";
+                break;
+            case 4:
+                groundName = "기름진 땅";
+                break;
+            case 5:
+                groundName = "환상의 땅";
+                break;
+        }
+    }
+
+    public void SetGroundRank(){
+        if(price > 10000000000){ //100억
+            rank = 1;
+        }
+        else if(price > 1000000000){ // 10억
+            rank = 2;
+        }
+        else if(price > 10000000){ // 천만
+            rank = 3;
+        }
+        else if(price > 100000){ // 십만
+            rank = 4;
+        }
+        else{
+            rank = 5;
+        }
     }
 }

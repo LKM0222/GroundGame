@@ -22,7 +22,9 @@ public class ClickManager : MonoBehaviour
 
             if(hit.collider != null){
                 if(hit.transform.gameObject.layer == 6){ //6 : Tile
+                    theGM.popupFlag = false;
                     GameObject click_Obj = hit.transform.gameObject;
+                    theGM.activeTile = hit.transform.gameObject.GetComponent<Tile>();
                     theUISystem.OnTileClick();
                     print(click_Obj.GetComponent<Tile>().GetLevel());
                 }

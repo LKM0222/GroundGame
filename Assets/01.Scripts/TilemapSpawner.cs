@@ -24,8 +24,11 @@ public class TilemapSpawner : MonoBehaviour
             this.transform.position = new Vector3(tmpX,tmpY,this.transform.position.z);
             dx = tmpX;
             for(int j = 0;j<theGM.tileSize;j++){
-                tile.GetComponent<Tile>().SetLeve(randomNum());
+                //타일이 생성될 때 등급에 따라 입력되어야 하는 데이터 
+                tile.GetComponent<Tile>().SetPrice(tile.GetComponent<Tile>().GetLevel() * 10000);
+                tile.GetComponent<Tile>().SetLevel(randomNum());
                 tile.GetComponent<Tile>().SetSprite(theGM.tileLevelSprite[tile.GetComponent<Tile>().GetLevel() - 1]);
+                tile.GetComponent<Tile>().SetGroundLevelToName();
                 Instantiate(tile, this.transform.position, Quaternion.identity);
                 dx += tile.GetComponent<BoxCollider2D>().size.x;
                 print(dx);
