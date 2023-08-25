@@ -21,8 +21,8 @@ public class TilePopupScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        groundNameText.text = theGM.activeTile.GetGroundName();
-        groundPriceText.text = theGM.activeTile.GetPrice().ToString();
-        groundRankText.text = theGM.activeTile.GetRank().ToString() + "등급";
+        // groundNameText.text = theGM.activeTile.GetGroundName();
+        // groundPriceText.text = theGM.activeTile.GetPrice().ToString();
+        // groundRankText.text = theGM.activeTile.GetRank().ToString() + "등급";
     }
 }

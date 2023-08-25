@@ -4415,7 +4415,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1536654346}
-  - component: {fileID: 1536654347}
   m_Layer: 0
   m_Name: TilemapSpawner
   m_TagString: Untagged
@@ -4438,19 +4437,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1536654347
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536654345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9867bca2f0997471f8a8d9dacb634741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tile: {fileID: 8391141588337072024, guid: 55752acbc8c524d3c80d9ef89b0075e4, type: 3}
 --- !u!1 &1540330166
 GameObject:
   m_ObjectHideFlags: 0
@@ -5207,9 +5193,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b942f612f9a4e4678ada7c2819f82859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileSize: 5
   popupFlag: 1
-  activeTile: {fileID: 0}
+  activeTile:
+    level: 0
+    price: 0
+    rank: 0
+    groundName: 
+    enforce: 0
+    building:
+      buildingName: 
+      buildingType: 0
+      buildingRank: 0
+      buildingEffect: 
   tileLevelSprite:
   - {fileID: -1401440235, guid: 9de30800ec58242fcb9f0948e18fa1d3, type: 3}
   - {fileID: -13112846, guid: 9de30800ec58242fcb9f0948e18fa1d3, type: 3}
