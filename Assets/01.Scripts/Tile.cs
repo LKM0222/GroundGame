@@ -6,15 +6,9 @@ using System;
 [System.Serializable]
 public class Tile
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] public string groundName;
+    [SerializeField] public int tilePrice;
+    [SerializeField] public int rank;
+    [SerializeField] public int enforce; 
+    [SerializeField] Building building;
 }

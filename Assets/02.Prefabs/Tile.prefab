@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8391141588337072026}
   - component: {fileID: 8391141588337072027}
   - component: {fileID: -3939031506839906987}
+  - component: {fileID: -1032413069092111050}
   m_Layer: 6
   m_Name: Tile
   m_TagString: Untagged
@@ -111,3 +112,30 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-1032413069092111050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8391141588337072024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90ae720d45c0740319bfbacd33164842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile:
+    groundName: 
+    tilePrice: 0
+    rank: 0
+    enforce: 0
+    building:
+      buildingName: 
+      buildingType: 0
+      buildingRank: 0
+      buildingEffect: 
+  building:
+    buildingName: 
+    buildingType: 0
+    buildingRank: 0
+    buildingEffect: 
