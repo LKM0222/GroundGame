@@ -25,6 +25,9 @@ public class TileSpawner : MonoBehaviour
                 tilePrefabs.name = "Tile" + (i * GameManager.tileSize + j);
                 Tile tiles = Instantiate(tilePrefabs, this.transform.position, Quaternion.identity).GetComponent<TileObject>().tile;
                 tiles.tilePrice = Random.Range(1000,10000);
+                tiles.rank = Random.Range(1,6);
+                tiles.tileNum = i * GameManager.tileSize + j;
+                tiles.SetGroundName();
                 theGM.tileList[i * GameManager.tileSize + j] = tiles;  
                 this.transform.position = new Vector3(this.transform.position.x + tileXSize , this.transform.position.y, this.transform.position.z);
             }

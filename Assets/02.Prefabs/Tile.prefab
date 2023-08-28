@@ -126,16 +126,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile:
     groundName: 
+    tileNum: 0
     tilePrice: 0
     rank: 0
     enforce: 0
     building:
       buildingName: 
+      buildingCode: 0
       buildingType: 0
       buildingRank: 0
       buildingEffect: 
-  building:
-    buildingName: 
-    buildingType: 0
-    buildingRank: 0
-    buildingEffect: 

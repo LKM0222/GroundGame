@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class BuildingEffectLIst : MonoBehaviour
+[System.Serializable]
+public class BuildingEffectLIst : Building
 {
     //학교
     /*

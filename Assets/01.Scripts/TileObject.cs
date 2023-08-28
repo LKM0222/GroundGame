@@ -5,5 +5,10 @@ using UnityEngine;
 public class TileObject : MonoBehaviour
 {
     [SerializeField] public Tile tile;
-    [SerializeField] public Building building;
+    GameManager theGM;
+    private void Start() {
+        theGM = FindObjectOfType<GameManager>();
+        this.GetComponent<SpriteRenderer>().sprite = theGM.tileLevelSprite[tile.rank - 1];
+    }
+    
 }
